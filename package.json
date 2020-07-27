@@ -1,5 +1,5 @@
 {
-  "name": "com.realgames.dear-imgui",
+  "name": "com.realgames.seabery.dear-imgui",
   "displayName": "Dear ImGui",
   "version": "1.0.0",
   "description": "Bloat-free Immediate Mode Graphical User interface",
@@ -10,7 +10,7 @@
     "ui"
   ],
   "author": {
-    "name": "Real Games",
+    "name": "Real Games / Seabery",
     "url": "https://realgames.co"
   },
   "dependencies": {
@@ -18,7 +18,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/realgamessoftware/dear-imgui-unity",
+    "url": "https://git-codecommit.eu-central-1.amazonaws.com/v1/repos/unity_dear-imgui",
     "revision": ""
   },
   "type": "library"
