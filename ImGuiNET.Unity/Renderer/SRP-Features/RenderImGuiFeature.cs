@@ -1,4 +1,5 @@
-﻿using UnityEngine.Rendering;
+﻿using UnityEngine;
+using UnityEngine.Rendering;
 
 #if HAS_URP
 using UnityEngine.Rendering.Universal;
@@ -15,7 +16,14 @@ namespace ImGuiNET.Unity
 
             public override void Execute(ScriptableRenderContext context, ref RenderingData renderingData)
             {
-                context.ExecuteCommandBuffer(cmd);
+                Camera camera = renderingData.cameraData.camera;
+
+                //var cmd = CommandBufferPool.Get(m_ProfilerTag);        
+                //cmd.SetViewProjectionMatrices(camera.worldToCameraMatrix, camera.projectionMatrix);   
+                // JM: Only draw on the main camera (done by tag here)
+                if( camera.tag == "MainCamera")
+                    context.ExecuteCommandBuffer(cmd);
+                //CommandBufferPool.Release(cmd);
             }
         }
 
